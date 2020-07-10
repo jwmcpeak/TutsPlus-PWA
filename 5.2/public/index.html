@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2196F3">
+    <link rel="manifest" href="./manifest.json">
+    <title>Company Status Report</title>
+    <link rel="stylesheet" href="assets/vendor/css/bs.css">
+</head>
+<body>
+    <div class="container" x-data="projectList" x-init="init()">
+        <h3>Status Report</h3>
+
+        <template x-if="isOffline">
+            <div class="alert alert-warning">
+                You are offline. Showing the last cached report.
+            </div>
+        </template>
+
+        <template x-for="(task, index) in tasks" x-key="index">
+            <div class="card" 
+                :class="{'bg-success text-white' : task.complete, 'bg-warning': marked.indexOf(task) > -1}"
+                @click="toggleComplete(task)">
+                <div class="card-body">
+                    <h5 class="card-title" x-html="task.name"></h5>
+                    <p class="card-text" x-html="task.description"></p>
+                </div>
+            </div>
+        </template>
+    </div>
+
+
+    <script src="assets/vendor/js/alpine.js"></script>
+    <script src="assets/vendor/js/idb-keyval.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

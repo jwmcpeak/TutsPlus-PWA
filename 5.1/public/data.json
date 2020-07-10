@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Find office space",
+            "description": "Find a suitable location for our office space. Preferrably downtown.",
+            "complete": false
+        },
+        {
+            
+            "id": 2,
+            "name": "Hire marketting manager",
+            "description": "Someone with the skills of selling via social media.",
+            "complete": true
+        },
+        {
+            "id": 3,
+            "name": "Develop application",
+            "description": "Needs to work in all devices.",
+            "complete": false
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Status Report for Company Tasks",
+    "short_name" : "Status Report",
+    "description": "Web application for displaying the status of company-wide tasks",
+    "start_url": "../index.html",
+    "theme_color": "#2196F3"
+}
